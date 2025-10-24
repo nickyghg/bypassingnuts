@@ -290,7 +290,6 @@ const videos = [
     {
         id: 1,
         name: "flying on blocksmc with liquidbounce",
-        creator: "BypassingNuts",
         uploaded: "2/15/2025",
         duration: "2:53",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/FLYING%20on%20BlocksMC%20with%20Liquidbounce.png",
@@ -306,7 +305,6 @@ const videos = [
     {
         id: 2,
         name: "blocksmc autoblock and sprint scaffold",
-        creator: "BypassingNuts",
         uploaded: "2/10/2025",
         duration: "3:22",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/BLOCKSMC%20AUTOBLOCK%20AND%20SPRINT%20SCAFFOLD.png",
@@ -322,7 +320,6 @@ const videos = [
     {
         id: 3,
         name: "destroying verus ft. exire",
-        creator: "BypassingNuts",
         uploaded: "2/5/2025",
         duration: "1:51",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/Destroying%20Verus%20ft.%20Exire.png",
@@ -338,7 +335,6 @@ const videos = [
     {
         id: 4,
         name: "rise 6 high end blocksmc gaming",
-        creator: "BypassingNuts",
         uploaded: "1/28/2025",
         duration: "2:16",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/rise%206%20high%20end%20blocksmc%20gaming.png",
@@ -354,7 +350,6 @@ const videos = [
     {
         id: 5,
         name: "the best hvh server is back! - norules",
-        creator: "BypassingNuts",
         uploaded: "1/20/2025",
         duration: "3:56",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/The%20best%20HvH%20server%20is%20BACK!%20-%20NoRules.png",
@@ -370,7 +365,6 @@ const videos = [
     {
         id: 6,
         name: "epic universocraft gaming ft. liquidbounce",
-        creator: "BypassingNuts",
         uploaded: "1/15/2025",
         duration: "2:03",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/epic%20universocraft%20gaming%20ft.%20liquidbounce.png",
@@ -386,7 +380,6 @@ const videos = [
     {
         id: 7,
         name: "server crashing exploit - liquidbounce",
-        creator: "BypassingNuts",
         uploaded: "1/10/2025",
         duration: "1:29",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/SERVER%20CRASHING%20EXPLOIT%20-%20LIQUIDBOUNCE.png",
@@ -402,7 +395,6 @@ const videos = [
     {
         id: 8,
         name: "bypassingnuts - 2023",
-        creator: "BypassingNuts",
         uploaded: "1/5/2025",
         duration: "4:44",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/bypassingnuts%20-%202023.png",
@@ -418,7 +410,6 @@ const videos = [
     {
         id: 9,
         name: "sentinel cannot be fixed",
-        creator: "BypassingNuts",
         uploaded: "12/28/2024",
         duration: "1:01",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/Sentinel%20CANNOT%20be%20fixed.png",
@@ -434,7 +425,6 @@ const videos = [
     {
         id: 10,
         name: "craftplay disabled their anticheat?!",
-        creator: "BypassingNuts",
         uploaded: "12/20/2024",
         duration: "3:07",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/Craftplay%20DISABLED%20THEIR%20ANTICHEAT!.png",
@@ -450,7 +440,6 @@ const videos = [
     {
         id: 11,
         name: "hacking on blockdrop with azura 5.0 beta?!? - broken vid",
-        creator: "BypassingNuts",
         uploaded: "12/15/2024",
         duration: "3:23",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/Hacking%20on%20BlockDrop%20with%20Azura%205.0%20Beta!%20-%20broken%20vid.png",
@@ -466,7 +455,6 @@ const videos = [
     {
         id: 12,
         name: "no anticheat server in 2024 wtf!?",
-        creator: "BypassingNuts",
         uploaded: "12/10/2024",
         duration: "1:02",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/NO%20ANTICHEAT%20SERVER%20IN%202024%20WTF!.png",
@@ -482,7 +470,6 @@ const videos = [
     {
         id: 13,
         name: "rolling the paper on skycave - azura 5.0",
-        creator: "BypassingNuts",
         uploaded: "12/5/2024",
         duration: "3:32",
         thumbnail: "https://raw.githubusercontent.com/nickyghg/bypassingnuts/main/resources/thumbnails/Rolling%20the%20paper%20on%20SkyCave%20-%20Azura%205.0.png",
