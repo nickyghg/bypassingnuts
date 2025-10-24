@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #8b5cf6;
+    --tertiary-color: #06b6d4;
+    --accent-color: #6366f1;
+    --text-color: #e8e8e8;
+    --background-color: #0a0a0f;
+    --surface-color: #1a1a2e;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-color) !important;
+}
+
+header {
+    background-color: rgba(15, 15, 25, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.445), 0 0 10px var(--accent-color);
+    transition: all 0.5s ease;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: headerGlow 4s infinite alternate;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes headerGlow {
+    0% { 
+        box-shadow: 0 0 3px var(--accent-color);
+        border-bottom-color: var(--accent-color);
+    }
+    50% { 
+        box-shadow: 0 0 5px var(--secondary-color);
+        border-bottom-color: var(--secondary-color);
+    }
+    100% { 
+        box-shadow: 0 0 4px var(--tertiary-color);
+        border-bottom-color: var(--tertiary-color);
+    }
+}
+
+@keyframes boxShadowFade {
+    0% { box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3); }
+    50% { box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3); }
+    100% { box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3); }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    transition: color 0.5s ease;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 110px; /* or enough to clear the header */
+}
+
+.video-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(15, 15, 25, 0.6);
+    border-radius: 24px;
+    padding: 2rem;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.video-player {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.video-player iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.video-player:hover {
+    box-shadow: 0 12px 48px var(--accent-color), 0 8px 32px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
+}
+
+/* Video hover animation handled by JavaScript */
+
+.details {
+    max-width: 800px;
+    text-align: center;
+    background: rgba(20, 20, 30, 0.4);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.details h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.details p {
+    margin: 0.75rem 0;
+    color: #e8e8e8;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.details ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem; /* Adds space between tags */
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.details ul li {
+    padding: 0.75rem 1.25rem;
+    margin: 0;
+    display: inline-block;
+    border-radius: 12px;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    background: rgba(99, 102, 241, 0.2);
+    transition: box-shadow 0.3s, background-color 0.3s, transform 0.3s;
+    font-weight: 500;
+}
+
+.details ul li:hover {
+    box-shadow: 0 8px 24px var(--accent-color), 0 0 12px var(--secondary-color);
+    background: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border: none;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.8));
+    border-radius: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 48px var(--accent-color), 0 0 20px var(--secondary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Unify button/tag styles and glow */
+.back-button {
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 400;
+    position: absolute;
+    right: 2rem;
+    font-family: 'Poppins', sans-serif;
+    text-transform: lowercase;
+    letter-spacing: 0.3px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back-button::before {
+    content: "←";
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
+    transform: translateX(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 0 20px var(--accent-color);
+    color: #ffffff;
+}
+
+.back-button:hover::before {
+    transform: translateX(-3px);
+}
+
+.other-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust as needed for more/less space */
+    justify-content: center;
+}
+
+/* Liquid Ether-like animated background */
+/* Add this at the end of your CSS file */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse 40% 30% at var(--x1,20%) var(--y1,30%), var(--primary-color) 0%, transparent 80%),
+        radial-gradient(ellipse 35% 25% at var(--x2,80%) var(--y2,70%), var(--secondary-color) 0%, transparent 80%),
+        radial-gradient(ellipse 50% 40% at var(--x3,60%) var(--y3,50%), var(--tertiary-color) 0%, transparent 80%),
+        linear-gradient(120deg, var(--background-color) 0%, var(--surface-color) 100%);
+    opacity: 0.85;
+    filter: blur(32px) saturate(1.3) brightness(0.7);
+    transition: background 0.2s;
+}
+
+/* Add a dark vignette overlay to remove white borders */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 50% 50%, transparent 60%, var(--background-color) 100%);
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+@keyframes liquidMove {
+    0% {
+        background-position:
+            20% 30%,
+            80% 70%,
+            50% 50%;
+    }
+    50% {
+        background-position:
+            40% 60%,
+            60% 40%,
+            70% 80%;
+    }
+    100% {
+        background-position:
+            20% 30%,
+            80% 70%,
+            50% 50%;
+    }
+}
+
+.video-info, .download-button, .back-button, .details ul li {
+    border: 2px solid transparent !important;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.5);
+    background: rgba(30,30,40,0.65);
+    color: #fff !important;
+    transition: box-shadow 0.3s cubic-bezier(.4,0,.2,1), background 0.3s, transform 0.3s cubic-bezier(.4,0,.2,1), color 0.3s;
+}
+
+.video-info:hover, .download-button:hover, .back-button:hover, .details ul li:hover {
+    transition: box-shadow 0.3s cubic-bezier(.4,0,.2,1), background 0.3s, transform 0.3s cubic-bezier(.4,0,.2,1), color 0.3s;
+    transform: scale(1.04);
+}
+
+.back-button {
+    transition: box-shadow 0.25s cubic-bezier(.4,0,.2,1), background 0.25s, transform 0.25s cubic-bezier(.4,0,.2,1), color 0.25s;
+    border: none !important;
+    box-shadow: 0 0 8px 2px #fff2;
+    background: rgba(30,30,40,0.85);
+    color: #fff !important;
+    border-radius: 8px;
+}
+
+.back-button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 16px 4px #fff6;
+    background: rgba(60,60,80,0.95);
+    color: #fff !important;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, a, .details, .video-info, .download-button, .back-button {
+    color: #fff !important;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply to text and images inside main content */
+main > *, #videoDetails > * {
+    opacity: 0;
+    animation: fadeInUp 1.2s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+/* Optionally, stagger the animation for a nicer effect */
+main > *:nth-child(1), #videoDetails > *:nth-child(1) { animation-delay: 0.1s; }
+main > *:nth-child(2), #videoDetails > *:nth-child(2) { animation-delay: 0.3s; }
+main > *:nth-child(3), #videoDetails > *:nth-child(3) { animation-delay: 0.5s; }
+main > *:nth-child(4), #videoDetails > *:nth-child(4) { animation-delay: 0.7s; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .video-player iframe {
+        height: 250px;
+    }
+    
+    .details h2 {
+        font-size: 1.5rem;
+    }
+    
+    main {
+        padding: 1rem;
+        margin-top: 80px;
+    }
+}
+
+/* Theme selector styling */
+.theme-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.theme-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(15, 15, 25, 0.8);
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.theme-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px var(--accent-color);
+    border-color: var(--accent-color);
+    background: rgba(15, 15, 25, 0.9);
+}
+
+.theme-icon svg {
+    transition: transform 0.3s ease;
+}
+
+.theme-icon:hover svg {
+    transform: rotate(90deg);
+}
+
+.theme-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(15, 15, 25, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 1rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.theme-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.theme-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.theme-option {
+    padding: 0.5rem 0.75rem;
+    background: rgba(20, 20, 30, 0.6);
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.theme-option:hover {
+    background: rgba(30, 30, 40, 0.8);
+    border-color: var(--accent-color);
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.theme-option.active {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
