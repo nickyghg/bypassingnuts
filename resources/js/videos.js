@@ -484,7 +484,7 @@ const videos = [
     }
 ];
 
-const searchFields = ["creator", "name", "tags"];
+const searchFields = ["name", "tags"];
 let hideOutdated = true;
 let currentField = null;
 let searchCriteria = {};
@@ -520,7 +520,7 @@ function handleInput(event) {
     const searchBar = event.target;
     const input = searchBar.value.trim();
 
-    // If the user is typing inside a field (e.g., "creator:"), update the current value for that field
+    // If the user is typing inside a field (e.g., "name:"), update the current value for that field
     if (currentField && !input.endsWith(">")) {
         searchCriteria[currentField] = input;
     }
@@ -533,7 +533,7 @@ function handleKeyDown(event) {
     const searchBar = event.target;
     const input = searchBar.value.trim();
 
-    // Check if the input matches a command followed by a space (e.g., "creator:")
+    // Check if the input matches a command followed by a space (e.g., "name:")
     if (event.key === " " && input.includes(":") && searchFields.some(field => input.startsWith(field + ":"))) {
         currentField = input.split(":")[0];
         searchCriteria[currentField] = ""; // Start capturing input for this field
@@ -611,7 +611,6 @@ function populateVideos() {
                 </div>
                 <div class="video-info">
                     <h2>${video.name}</h2>
-                    <p>creator: ${video.creator}</p>
                     <p>duration: ${video.duration}</p>
                     <a href="video.html?id=${video.id}">watch video</a>
                 </div>
