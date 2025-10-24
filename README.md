@@ -1,48 +1,35 @@
 # BypassingNuts Video Archive
 
-A sleek video archive website for the BypassingNuts YouTube channel, featuring the same beautiful animated background and styling as the original config website.
+This is a website for watching BypassingNuts videos (the ones i could save). It looks the same as my config website with the moving background and stuff.
 
-## Features
+## What it does
 
-- **Horizontal video layout** with thumbnail, title, and duration
-- **Embedded video player** on detail pages
-- **Animated ether-like background** with moving gradients
-- **Responsive design** for all devices
-- **Search functionality** by creator, name, and tags
-- **Smooth animations** and hover effects
+- Shows the videos with thumbnail and names
+- Has a cool moving background that changes colors
+- Works on your phone and computer
+- Things move when you hover over them
 
-## Files Structure
+## Files
 
-- `videos.html` - Main video listing page
-- `video.html` - Individual video detail page with embedded player
-- `resources/js/videos.js` - Video data and functionality
-- `resources/styles/videos.css` - Styling for video listing
-- `resources/styles/video-detail.css` - Styling for video details
+- `videos.html` - Main page with all videos
+- `video.html` - Page where you watch videos
+- `resources/js/videos.js` - Has all the video info
+- `resources/styles/videos.css` - Makes the main page look good
+- `resources/styles/video-detail.css` - Makes the video pages look good
 
-## Usage
+## Adding videos
 
-1. Open `videos.html` to browse the video archive
-2. Click "Watch Video" to view individual videos
-3. Videos are embedded directly on the detail page
-4. All styling matches the original config website aesthetic
-
-## Customization
-
-To add new videos, edit the `videos` array in `resources/js/videos.js`:
+Feel free to add new videos you have saved just edit the list in `resources/js/videos.js` and make a pull request:
 
 ```javascript
 {
     id: 7,
-    name: "Your Video Title",
+    name: "Video Title",
     creator: "BypassingNuts",
-    uploaded: "2/20/2025",
     duration: "5:30",
-    thumbnail: "https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg",
-    videoUrl: "https://www.youtube.com/embed/VIDEO_ID",
-    description: "Video description",
-    tags: ["Tag1", "Tag2"],
-    views: "1M",
-    likes: "50K",
+    thumbnail: "put in thumbnail folder",
+    videoUrl: "upload it to jumpshare and put the embed url here",
+    description: "What the video is about",
     colors: {
         text: "#ffffff",
         accent: "#ff0000",
@@ -51,6 +38,6 @@ To add new videos, edit the `videos` array in `resources/js/videos.js`:
 }
 ```
 
-## Channel
+## the dead channel :(
 
-Visit the BypassingNuts YouTube channel: https://youtube.com/@bypassingnuts
+BypassingNuts YouTube: https://youtube.com/@bypassingnuts
