@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Details - BypassingNuts</title>
+    <link id="favicon" rel="icon" href="resources/icons/logonew.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="resources/styles/video-detail.css">
+    <meta content="" name="description"/>
+    <meta content="BypassingNuts Video Details" property="og:title"/>
+    <meta content="BypassingNuts video archive website" property="og:description"/>
+    <meta content="https://raw.githubusercontent.com/nickyghg/configs/refs/heads/main/resources/icons/logonew.jpg" property="og:image"/>
+    <meta content="BypassingNuts Video Details" property="twitter:title"/>
+    <meta content="BypassingNuts video archive website" property="twitter:description"/>
+    <meta content="https://raw.githubusercontent.com/nickyghg/configs/refs/heads/main/resources/icons/logonew.jpg" property="twitter:image"/>
+    <meta property="og:type" content="website"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+</head>
+<body>
+    <header id="videoHeader">
+        <div style="text-align: center; margin-top: 20px;">
+            <span style="font-size: 24px; font-weight: bold; text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);" id="videoTitle">video details</span>
+            <div style="margin-top: 10px;">
+                <a href="videos.html" class="back-button">back</a>
+                <div class="theme-selector">
+                    <button id="themeIcon" onclick="toggleThemeMenu()" class="theme-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                            <circle cx="6" cy="6" r="1" fill="currentColor"/>
+                            <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                            <circle cx="6" cy="18" r="1" fill="currentColor"/>
+                            <circle cx="18" cy="18" r="1" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div id="themeMenu" class="theme-menu">
+                        <div class="theme-options">
+                            <button onclick="applyTheme('purple')" class="theme-option" data-theme="purple">Purple</button>
+                            <button onclick="applyTheme('red')" class="theme-option" data-theme="red">Red</button>
+                            <button onclick="applyTheme('green')" class="theme-option" data-theme="green">Green</button>
+                            <button onclick="applyTheme('yellow')" class="theme-option" data-theme="yellow">Yellow</button>
+                            <button onclick="applyTheme('neon')" class="theme-option" data-theme="neon">Neon</button>
+                            <button onclick="applyTheme('ocean')" class="theme-option" data-theme="ocean">Ocean</button>
+                            <button onclick="applyTheme('forest')" class="theme-option" data-theme="forest">Forest</button>
+                            <button onclick="applyTheme('sunset')" class="theme-option" data-theme="sunset">Sunset</button>
+                            <button onclick="applyTheme('matrix')" class="theme-option" data-theme="matrix">Matrix</button>
+                            <button onclick="applyTheme('aurora')" class="theme-option" data-theme="aurora">Aurora</button>
+                            <button onclick="applyTheme('fire')" class="theme-option" data-theme="fire">Fire</button>
+                            <button onclick="applyTheme('cosmic')" class="theme-option" data-theme="cosmic">Cosmic</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="videoDetails">
+    </main>
+    
+    <script defer src="resources/js/videos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const videoId = parseInt(params.get("id"));
+    const video = videos.find(p => p.id === videoId);
+
+    if (!video) {
+        document.getElementById('videoDetails').innerHTML = '<div style="text-align: center; color: #fff; margin-top: 2rem;"><h2>video not found</h2><a href="videos.html" class="back-button">back to videos</a></div>';
+        return;
+    }
+
+    // Apply video colors and gradient background
+    document.getElementById('videoHeader').style.borderBottomColor = video.colors.header;
+    document.getElementById('videoTitle').style.color = video.colors.text;
+    document.querySelector('.back-button').style.borderColor = video.colors.header;
+
+    const videoDetails = document.getElementById('videoDetails');
+
+    let tagsContent = '';
+    // Tags removed as requested
+
+    let otherButtonsContent = '';
+    // YouTube button removed as videos are private
+
+    videoDetails.innerHTML = `
+        <div class="video-info" style="color: ${video.colors.text};">
+            <div class="video-player">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                    <iframe 
+                        src="${video.videoUrl}" 
+                        title="${video.name}"
+                        frameborder="0" 
+                        webkitallowfullscreen 
+                        mozallowfullscreen 
+                        allowfullscreen 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; transition: transform 0.3s ease;">
+                    </iframe>
+                </div>
+            </div>
+            <div class="details">
+                <h2>${video.name}</h2>
+                <p>creator: ${video.creator}</p>
+                <p>duration: ${video.duration}</p>
+                <p>${video.description}</p>
+                ${tagsContent}
+            </div>
+        </div>
+        ${otherButtonsContent}
+    `;
+    document.title = video.name + " - BypassingNuts Archive";
+    
+    // Add hover animation to iframe after it's created
+    setTimeout(() => {
+        const iframe = document.querySelector('.video-player iframe');
+        const videoPlayer = document.querySelector('.video-player');
+        
+        if (iframe && videoPlayer) {
+            iframe.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            
+            videoPlayer.addEventListener('mouseenter', () => {
+                iframe.style.transform = 'scale(1.01)';
+            });
+            
+            videoPlayer.addEventListener('mouseleave', () => {
+                iframe.style.transform = 'scale(1)';
+            });
+        }
+    }, 200);
+});
+    </script>
+</body>
+</html>

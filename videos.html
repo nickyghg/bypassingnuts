@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BypassingNuts Video Archive</title>
+    <link id="favicon" rel="icon" href="resources/icons/logonew.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="resources/styles/videos.css">
+    <meta content="" name="description"/>
+    <meta content="BypassingNuts Video Archive" property="og:title"/>
+    <meta content="BypassingNuts video archive website" property="og:description"/>
+    <meta content="https://raw.githubusercontent.com/nickyghg/configs/refs/heads/main/resources/icons/logonew.jpg" property="og:image"/>
+    <meta content="BypassingNuts Video Archive" property="twitter:title"/>
+    <meta content="BypassingNuts video archive website" property="twitter:description"/>
+    <meta content="https://raw.githubusercontent.com/nickyghg/configs/refs/heads/main/resources/icons/logonew.jpg" property="twitter:image"/>
+    <meta property="og:type" content="website"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px; gap: 2rem;">
+            <span style="font-size: 24px; font-weight: bold; text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);">bypassingnuts video archive</span>
+            <div class="theme-selector">
+                    <button id="themeIcon" onclick="toggleThemeMenu()" class="theme-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                            <circle cx="6" cy="6" r="1" fill="currentColor"/>
+                            <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                            <circle cx="6" cy="18" r="1" fill="currentColor"/>
+                            <circle cx="18" cy="18" r="1" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div id="themeMenu" class="theme-menu">
+                        <div class="theme-options">
+                            <button onclick="applyTheme('purple')" class="theme-option" data-theme="purple">Purple</button>
+                            <button onclick="applyTheme('red')" class="theme-option" data-theme="red">Red</button>
+                            <button onclick="applyTheme('green')" class="theme-option" data-theme="green">Green</button>
+                            <button onclick="applyTheme('yellow')" class="theme-option" data-theme="yellow">Yellow</button>
+                            <button onclick="applyTheme('neon')" class="theme-option" data-theme="neon">Neon</button>
+                            <button onclick="applyTheme('ocean')" class="theme-option" data-theme="ocean">Ocean</button>
+                            <button onclick="applyTheme('forest')" class="theme-option" data-theme="forest">Forest</button>
+                            <button onclick="applyTheme('sunset')" class="theme-option" data-theme="sunset">Sunset</button>
+                            <button onclick="applyTheme('matrix')" class="theme-option" data-theme="matrix">Matrix</button>
+                            <button onclick="applyTheme('aurora')" class="theme-option" data-theme="aurora">Aurora</button>
+                            <button onclick="applyTheme('fire')" class="theme-option" data-theme="fire">Fire</button>
+                            <button onclick="applyTheme('cosmic')" class="theme-option" data-theme="cosmic">Cosmic</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </header>
+    <main id="videoList">
+    </main>
+    <script defer src="resources/js/videos.js"></script>
+</body>
+</html>
